@@ -44,8 +44,8 @@
     .form-group label {
       display: block;
       margin-bottom: 5px;
-      font-weight: 400;
-      font-size:1.1em;
+      font-weight: 700;
+      font-size:1.4em;
     }
     .form-group input[type="text"],
     .form-group input[type="email"],
@@ -54,15 +54,15 @@
       width: 100%;
       padding: 10px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 8px;
       font-size: 1em;
-      font-weight: 400;
+      font-weight: 300;
     }
     .status-options label {
       display: block;
       margin-bottom: 5px;
-      font-size:1em;
-      font-weight:400;
+      font-size:1.1em;
+      font-weight:300;
     }
     .btn-submit {
       background-color: #009191;
@@ -102,11 +102,12 @@
     <form id="registrationForm">
         <div class="form-group">
         <label for="Nama">Nama Lengkap:<span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span><br/>
-         <span style="color:#333333;font-size:14px;"><i>Tanpa gelar akademik</i></span></label>
+         <span style="color:#333333;font-size:14px;font-weight:400;"><i>Tanpa gelar akademik</i></span></label>
         <input type="text" id="Nama" name="Nama" placeholder="contoh: Agam Ferry" required>
       </div>
       <div class="form-group">
-        <label for="Email">Email: <i>(sesuai akun Pelataran Sehat)</i><span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span></label>
+        <label for="Email">Email:<span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span><br/>
+        <span style="color:#333333;font-size:14px;font-weight:400;"><i>(sesuai akun Pelataran Sehat)</i></label>
         <input type="email" id="Email" name="Email" placeholder="contoh: email@domain.com" required>
       </div>
       <div class="form-group">
@@ -114,7 +115,7 @@
         <input type="text" id="NIK" name="NIK" placeholder="16 digit NIK" required>
       </div>
       <div class="form-group">
-        <label for="WhatsApp">Nomor WhatsApp:<span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span></label>
+        <label for="WhatsApp">Nomor WhatsApp:<span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span><br/></label>
         <input type="text" id="WhatsApp" name="WhatsApp" placeholder="contoh: 081234567890" required>
       </div>
       <div class="form-group">
@@ -135,7 +136,7 @@
       </div>
       <div class="form-group">
         <label for="Bukti">Bukti Pembayaran:<span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span><br/>
-          <span style="color:#333333;font-size:14px;"><i>Upload bukti transfer (file format jpg/png, max 10MB) biaya registrasi sebesar Rp.100.000,- ke rekening BANK MANDIRI - 1660003218328 an. RIFQIE AL-HARIS</i></span></label>
+          <span style="color:#333333;font-size:14px;font-weight:400;line-height:0.9em;padding-top:10px;"><i>Upload bukti transfer (file format jpg/png, max 10MB) biaya registrasi sebesar Rp.100.000,- ke rekening BANK MANDIRI - 1660003218328 an. RIFQIE AL-HARIS</i></span></label>
         <input type="file" id="Bukti" name="Bukti" class="file-upload" required>
       </div>
       <p><span style="color:#cc000090;font-size:14px;vertical-align: super;padding:0 0 0 20px;">*</span><span style="color:red;font-size:14px;">wajib diisi</p>
