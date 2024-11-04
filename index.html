@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registrasi Simposium Dental LASER - GLOW 2024</title>
+  <title>Registrasi Webinar Gigital</title>
   <style>
     /* Import Google Fonts for SF Pro and Inter */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=SF+Pro:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700,800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;500;600;700&display=swap');
 
     * {
       box-sizing: border-box;
-      font-family: 'SF Pro', 'Inter', sans-serif;
+      font-family: 'Inter', 'Helvetica', sans-serif;
     }
     body {
       background-color: #f4f4f9;
@@ -98,10 +98,46 @@
   method="POST" 
   action="https://script.google.com/macros/s/AKfycbzKXCu9XVLjG8dysLQdo7xgK7ywujcVOpIOXsy9HHt0y8jypm_OdJ16VR-dFhEReLU55Q/exec"
 >
-  <input name="Email" type="email" placeholder="Email" required>
-  <input name="Name" type="text" placeholder="Name" required>
-  <button type="submit">Send</button>
-</form>
+        <div class="form-group">
+        <label for="Nama">Nama Lengkap: <i>(tanpa gelar akademik)</i><span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span></label>
+        <input type="text" id="Nama" name="Nama" placeholder="contoh: Agam Ferry" required>
+      </div>
+        <div class="form-group">
+        <label for="Email">Nama Lengkap: <i>(tanpa gelar akademik)</i><span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span></label>
+        <input type="email" id="Email" name="Email" placeholder="format: email@domain.com" required>
+      </div>
+      <div class="form-group">
+        <label for="NIK">Nomor Induk Kependudukan (NIK):<span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span></label>
+        <input type="text" id="NIK" name="NIK" placeholder="16 digit NIK" required>
+      </div>
+      <div class="form-group">
+        <label for="Whatsapp">Nomor WhatsApp:<span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span></label>
+        <input type="text" id="Whatsapp" name="Whatsapp" placeholder="contoh: 081234567890" required>
+      </div>
+      <div class="form-group">
+        <label>Status:<span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span></label>
+        <div class="status-options">
+          <label><input type="radio" name="status" value="Dokter Gigi Umum" required> Dokter Gigi Umum</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Penyakit Mulut" required> Dokter Gigi Spesialis Penyakit Mulut</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Periodonsia" required> Dokter Gigi Spesialis Periodonsia</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Ortodonsia" required> Dokter Gigi Spesialis Ortodonsia</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Prostodonsia" required> Dokter Gigi Spesialis Prostodonsia</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Konservasi Gigi" required> Dokter Gigi Spesialis Konservasi Gigi</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Bedah Mulut dan Maksilofasial" required> Dokter Gigi Spesialis Bedah Mulut Maksilofasial</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Kedokteran Gigi Anak" required> Dokter Gigi Spesialis Kedokteran Gigi Anak </label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Radiologi Kedokteran Gigi" required> Dokter Gigi Spesialis Radiologi Kedokteran Gigi</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Patologi Mulut dan Maksilofasial" required> Dokter Gigi Spesialis Patologi Mulut Maksilofasial</label>
+          <label><input type="radio" name="status" value="Dokter Gigi Spesialis Odontologi Forensik" required> Dokter Gigi Spesialis Odontologi Forensik</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="Bukti">Bukti Pembayaran:<span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span><br/>
+          <span style="color:#333333;font-size:14px;"><i>Upload bukti transfer (file format jpg/png, max 10MB) biaya registrasi sebesar Rp.100.000,- ke rekening BANK MANDIRI - 1660003218328 an. RIFQIE AL-HARIS</i></span></label>
+        <input type="file" id="Bukti" name="Bukti" class="file-upload" required>
+      </div>
+      <p><span style="color:#cc000090;font-size:14px;vertical-align: super;padding:0 0 0 20px;">*</span><span style="color:red;font-size:14px;">wajib diisi</p>
+      <button type="submit" class="btn-submit">Kirim</button>
+    </form>
     <form id="registrationForm">
       <div class="form-group">
         <label for="email">Email (harus sesuai akun Pelatihan Sehat):</label>
@@ -156,12 +192,12 @@
       const bukti = document.getElementById('bukti').files[0];
 
       const formData = new FormData();
-      formData.append('email', email);
-      formData.append('nama', nama);
-      formData.append('nik', nik);
-      formData.append('whatsapp', whatsapp);
-      formData.append('status', status);
-      formData.append('bukti', bukti);
+      formData.append('Nama', email);
+      formData.append('Email', nama);
+      formData.append('NIK', nik);
+      formData.append('Whatsapp', whatsapp);
+      formData.append('Status', status);
+      formData.append('Bukti', bukti);
 
       fetch('https://script.google.com/macros/s/AKfycbzKXCu9XVLjG8dysLQdo7xgK7ywujcVOpIOXsy9HHt0y8jypm_OdJ16VR-dFhEReLU55Q/exec', {
         method: 'POST',
