@@ -99,10 +99,7 @@
     <img src="https://live.staticflickr.com/65535/54112277082_23c28bd21d_n.jpg" width="900" height="444" alt="Banner Webinar" class="placeholder-img">
     </a>
     <h1 style="padding:0 20px!important;">Registrasi Webinar Gigital - CALM 2024</h1>
-    <form 
-  method="POST" 
-  action="https://script.google.com/macros/s/AKfycbzKXCu9XVLjG8dysLQdo7xgK7ywujcVOpIOXsy9HHt0y8jypm_OdJ16VR-dFhEReLU55Q/exec"
->
+    <form>
         <div class="form-group">
         <label for="Nama">Nama Lengkap: <i>(tanpa gelar akademik)</i><span style="color:#cc000090;font-size:14px;vertical-align: super;">&nbsp;*</span></label>
         <input type="text" id="Nama" name="Nama" placeholder="contoh: Agam Ferry" required>
@@ -189,12 +186,12 @@
       event.preventDefault();
 
       // Simpan data dan arahkan ke halaman konfirmasi
-      const email = document.getElementById('email').value;
-      const nama = document.getElementById('nama').value;
-      const nik = document.getElementById('nik').value;
-      const whatsapp = document.getElementById('whatsapp').value;
-      const status = document.querySelector('input[name="status"]:checked').value;
-      const bukti = document.getElementById('bukti').files[0];
+      const Email = document.getElementById('Nama').value;
+      const Nama = document.getElementById('Email').value;
+      const NIK = document.getElementById('NIK').value;
+      const WhatsApp = document.getElementById('WhatsApp').value;
+      const Status = document.querySelector('input[name="status"]:checked').value;
+      const Bukti = document.getElementById('Bukti').files[0];
 
       const formData = new FormData();
       formData.append('Nama', email);
