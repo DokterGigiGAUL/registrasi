@@ -190,16 +190,16 @@
       const Nama = document.getElementById('Email').value;
       const NIK = document.getElementById('NIK').value;
       const WhatsApp = document.getElementById('WhatsApp').value;
-      const Status = document.querySelector('input[name="status"]:checked').value;
+      const Status = document.querySelector('input[name="Status"]:checked').value;
       const Bukti = document.getElementById('Bukti').files[0];
 
       const formData = new FormData();
-      formData.append('Nama', email);
-      formData.append('Email', nama);
-      formData.append('NIK', nik);
-      formData.append('Whatsapp', whatsapp);
-      formData.append('Status', status);
-      formData.append('Bukti', bukti);
+      formData.append('Nama', Nama);
+      formData.append('Email', Email);
+      formData.append('NIK', NIK);
+      formData.append('Whatsapp', WhatsApp);
+      formData.append('Status', Status);
+      formData.append('Bukti', Bukti);
 
       fetch('https://script.google.com/macros/s/AKfycbzKXCu9XVLjG8dysLQdo7xgK7ywujcVOpIOXsy9HHt0y8jypm_OdJ16VR-dFhEReLU55Q/exec', {
         method: 'POST',
