@@ -184,7 +184,7 @@
     formData.append('BuktiType', Bukti.type);
 
     // Kirim data ke Google Apps Script
-    fetch('GOOGLE_SCRIPT_URL', {
+    fetch('https://script.google.com/macros/s/AKfycby_Bb-4U92Qg-LgyanW4PtWHQQbNmBHBme4eBaky_5d2izxQSgCdYxkpOSA8C4m2I3r0A/exec', {
       method: 'POST',
       body: formData
     })
