@@ -1,209 +1,217 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Registrasi Event Gigital">
-    <meta property="og:description" content="Pendaftaran peserta event webinar/ seminar Gigital">
-    <meta property="og:image" content="https://live.staticflickr.com/65535/54122193676_05d5bf043c_k.jpg">
-    <meta property="og:url" content="https://gigital.site/registrasi">
-    <meta property="og:type" content="website">
-  <title>Registrasi Webinar Gigital</title>
-  <style>
-    /* Import Google Fonts for Helvetica and Inter */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;500;600;700;800;900&display=swap');
+<style>
+/* Import Google Fonts for Helvetica and Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;500;600;700;800;900&display=swap');
+p{font-family: 'Inter', sans-serif; }
+.form-group {
+margin-bottom: 30px;
+padding:0 30px!important;
+}
+* {
+box-sizing: border-box;
+font-family: 'Inter', Helvetica, sans-serif;
+}
+.form-container {
+background-color: #ffffff;
+border-radius: 0px;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+.form-container h1 {
+text-align: left;
+color: #111111;
+font-weight: 800;
+margin:0px 15px;
+padding:30px 15px 15px;
+font-size:2em;
+font-family: 'Inter', sans-serif;
+}
+.form-container p{
+text-align:left;
+padding:0 30px 15px;
+color:#666666;
+font-size: 1.25em;
+line-height: 1.25em;
+font-weight:400;
+font-family: 'Inter', sans-serif; }
+.form-group {
+margin-bottom: 20px;
+padding:0 30px!important;
+}
+.form-group label {
+display: block;
+padding-bottom: 10px;
+font-weight: 700;
+font-size:1.5em;
+ine-height: 1.125em;
+letter-spacing:-0.025em;
+font-family: 'Inter', sans-serif;
+text-align:left;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="file"],
+.form-group .status-options {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 8px;
+font-size: 1.25em;
+line-height:1.5em;
+font-weight: 500;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="file"] { font-weight: 400;
+letter-spacing: -0.025em;
+}
+.form-group input[type="file"] {color:#999999;}
+.status-options label {
+display: block;
+margin-bottom: 0px;
+font-size: 1em;
+line-height: 1.25em;
+letter-spacing:-0.025em;
+font-weight: 400;
+}
+.btn-submit {
+background-color: #111111;
+color: white;
+margin: 0 auto 30px;
+width: 80%;
+padding: 15px;
+border: none;
+width: 85%;
+font-size: 1.25em;
+font-weight: 500;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+.btn-submit:hover {
+background-color: #006161;
+}
+.form-group .file-upload {
+padding: 5px;
+background-color: #f9f9f9;
+color:#999999;
+border: 1px dashed #cccccc;
+border-radius: 5px;
+text-align: center;
+}
+.placeholder-img {
+display: inline-block;
+width: 100%;
+object-fit: cover;
+max-height: 200px;
+}
+</style>
+<div class="form-container">
+<!-- <a href="https://doktergigigaul.github.io" target="_blank">
+<img src="https://live.staticflickr.com/65535/54122193676_05d5bf043c_k.jpg" width="900" height="444" alt="Banner Webinar" class="placeholder-img">
+</a> -->
+<h1>Pendaftaran</h1>
+<p style="">Peserta <strong>wajib</strong> memiliki akun SatuSehat yang telah terverifikasi</p>
+<p style="font-size:0.75em;text-align:left;"><span style="color:#cc000090;font-size:12px;vertical-align: super;padding:0px;">*</span><span style="color:red;font-size:12px;">wajib diisi</p>
+<form id="registrationForm">
+<div class="form-group">
+<label for="Nama">Nama Lengkap:<span style="color:#cc000090;font-size:14px;vertical-align: super;">*</span><br/>
+<span style="color:#888888;font-size:0.625em;line-height:0.625em;font-weight:500;padding-bottom:10px;">Tanpa gelar akademik</span></label>
+<input type="text" id="Nama" name="Nama" placeholder="contoh: Agam Ferry" required>
+</div>
+<div class="form-group">
+<label for="Email">Email:<span style="color:#cc000090;font-size:0.75em;vertical-align: super;">*</span><br/>
+<span style="color:#888888;font-size:0.625em;line-height:0.625em;font-weight:500;padding-bottom:10px;">email aktif untuk pengiriman info webinar</label>
+<input type="email" id="Email" name="Email" placeholder="contoh: email@domain.com" required>
+</div>
+<div class="form-group">
+<label for="NIK">Nomor Induk Kependudukan (NIK):<span style="color:#cc000090;font-size:14px;vertical-align: super;">*</span><br/>
+<span style="color:#888888;font-size:0.625em;line-height:0.625em;font-weight:500;padding-bottom:10px;">16 digit Nomor KTP untuk verifikasi akun Satu Sehat</label>
+<input type="text" id="NIK" name="NIK" placeholder="contoh: 123400190819800001" required>
+</div>
+<div class="form-group">
+<label for="WhatsApp">Nomor WhatsApp:<span style="color:#cc000090;font-size:14px;vertical-align: super;">*</span><br/></label>
+<span style="color:#888888;font-size:0.625em;line-height:0.625em;font-weight:500;padding-bottom:10px;">Hanya nomor. <b>Tanpa</b> kode negara [+62]</label>
+<input type="text" id="WhatsApp" name="WhatsApp" placeholder="contoh: 081234567890" required>
+</div>
+<div class="form-group">
+<label>Status:<span style="color:#cc000090;font-size:14px;vertical-align: super;">*</span></label>
+<div class="status-options">
+<label><input type="radio" name="Status" value="Dokter Gigi Umum" required> Dokter Gigi Umum</label>
+<label><input type="radio" name="Status" value="Dokter Gigi Spesialis Penyakit Mulut" required> Dokter Gigi Spesialis Penyakit Mulut</label>
+<label><input type="radio" name="Status" value="Dokter Gigi Spesialis Periodonsia" required> Dokter Gigi Spesialis Periodonsia</label>
+<label><input type="radio" name="Status" value="Dokter Gigi Spesialis Ortodonsia" required> Dokter Gigi Spesialis Ortodonsia</label>
+<label><input type="radio" name="Status" value="Dokter Gigi Spesialis Prostodonsia" required> Dokter Gigi Spesialis Prostodonsia</label>
+<label><input type="radio" name="Status" value="Dokter Gigi Spesialis Konservasi Gigi" required> Dokter Gigi Spesialis Konservasi Gigi</label>
+<label><input type="radio" name="Status" value="Dokter Gigi Spesialis Bedah Mulut dan Maksilofasial" required> Dokter Gigi Spesialis Bedah Mulut Maksilofasial</label>
+<label><input type="radio" name="Status" value="Dokter Gigi Spesialis Kedokteran Gigi Anak" required> Dokter Gigi Spesialis Kedokteran Gigi Anak </label>
+<label><input type="radio" name="Status" value="Dokter Gigi Spesialis Radiologi Kedokteran Gigi" required> Dokter Gigi Spesialis Radiologi Kedokteran Gigi</label>
+<label><input type="radio" name="Status" value="Dokter Gigi Spesialis Patologi Mulut dan Maksilofasial" required> Dokter Gigi Spesialis Patologi Mulut Maksilofasial</label>
+<label><input type="radio" name="Status" value="Dokter Gigi Spesialis Odontologi Forensik" required> Dokter Gigi Spesialis Odontologi Forensik</label>
+<label><input type="radio" name="Status" value="Mahasiswa" required> Mahasiswa/ Koas Kedokteran Gigi</label>
+<label><input type="radio" name="Status" value="Terapis Gigi" required> Terapis Gigi Mulut</label>
+</div>
 
-    * {
-      box-sizing: border-box;
-      font-family: 'Inter', Helvetica,  sans-serif;
-    }
-    body {
-      background-color: #f0f0f0;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-    }
-    .form-container {
-      background-color: #ffffff;
-      border-radius: 0px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 500px;
-    }
-    .form-container h1 {
-      text-align: center;
-      color: #333333;
-      font-weight: 800;
-      margin-bottom:0px;
-      padding:0 20px!important;
-      font-size:2.2em;
-    }
-    .form-group {
-      margin-bottom: 30px;
-      padding:0 20px!important;
-    }
-    .form-group label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: 800;
-      font-size:1.4em;
-    }
-    .form-group input[type="text"],
-    .form-group input[type="email"],
-    .form-group input[type="file"],
-    .form-group .status-options {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1em;
-      font-weight: 300;
-    }
-    .status-options label {
-      display: block;
-      margin-bottom: 5px;
-      font-size:1.1em;
-      font-weight:300;
-    }
-    .btn-submit {
-      background-color: #009191;
-      color: white;
-      padding: 15px;
-      border: none;
-      width: 100%;
-      font-size: 1.1em;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .btn-submit:hover {
-      background-color: #006161;
-    }
-    .form-group .file-upload {
-      padding: 5px;
-      background-color: #f9f9f9;
-      border: 1px dashed #cccccc;
-      border-radius: 5px;
-      text-align: center;
-    }
-    .placeholder-img {
-    display: inline-block;
-    width: 100%;
-    object-fit: cover;
-    max-height: 200px;
-    }
-  </style>
-</head>
-<body>
-    <div class="form-container">
-    <a href="https://doktergigigaul.github.io" target="_blank">
-    <img src="https://live.staticflickr.com/65535/54122193676_05d5bf043c_k.jpg" width="900" height="444" alt="Banner Webinar" class="placeholder-img">
-    </a>
-    <h1 style="padding:0 20px!important;">Registrasi Event<br/>Gigital x Stoothdy</h1>
-    <p style="text-align:center;padding:0 20px 45px 20px;color:#666666;font-size:15px;font-weight:300;">Bagi peserta dokter gigi/ dokter gigi spesialis/ dokter/ dokter spesialis <b>wajib</b> memiliki akun Satu Sehat yang telah terverifikasi</p>
-      <form id="registrationForm">
-        <div class="form-group">
-        <label for="Nama">Nama Lengkap:<span style="color:#cc000090;font-size:14px;vertical-align: super;">*</span><br/>
-         <span style="color:#888888;font-size:14px;font-weight:400;margin-bottom:10px;">Tanpa gelar akademik</span></label>
-        <input type="text" id="Nama" name="Nama" placeholder="contoh: Agam Ferry" required>
-      </div>
-      <div class="form-group">
-        <label for="Email">Email:<span style="color:#cc000090;font-size:14px;vertical-align: super;">*</span><br/>
-        <span style="color:#888888;font-size:14px;font-weight:400;margin-bottom:10px;">email aktif untuk pengiriman info webinar</label>
-        <input type="email" id="Email" name="Email" placeholder="contoh: email@domain.com" required>
-      </div>
-      <div class="form-group">
-        <label for="NIK">Nomor Induk Kependudukan (NIK):<span style="color:#cc000090;font-size:14px;vertical-align: super;">*</span></label>
-        <span style="color:#888888;font-size:14px;font-weight:400;margin-bottom:10px;">16 digit Nomor KTP untuk verifikasi akun Satu Sehat</label>
-        <input type="text" id="NIK" name="NIK" placeholder="contoh: 123400190819800001" required>
-      </div>
-      <div class="form-group">
-        <label for="WhatsApp">Nomor WhatsApp:<span style="color:#cc000090;font-size:14px;vertical-align: super;">*</span><br/></label>
-        <input type="text" id="WhatsApp" name="WhatsApp" placeholder="contoh: 081234567890" required>
-      </div>
-      <div class="form-group">
-        <label>Status:<span style="color:#cc000090;font-size:14px;vertical-align: super;">*</span></label>
-        <div class="status-options">
-          <label><input type="radio" name="Status" value="Dokter Gigi Umum" required> Dokter Gigi Umum</label>
-          <label><input type="radio" name="Status" value="Dokter Gigi Spesialis Penyakit Mulut" required> Dokter Gigi Spesialis Penyakit Mulut</label>
-          <label><input type="radio" name="Status" value="Dokter Gigi Spesialis Periodonsia" required> Dokter Gigi Spesialis Periodonsia</label>
-          <label><input type="radio" name="Status" value="Dokter Gigi Spesialis Ortodonsia" required> Dokter Gigi Spesialis Ortodonsia</label>
-          <label><input type="radio" name="Status" value="Dokter Gigi Spesialis Prostodonsia" required> Dokter Gigi Spesialis Prostodonsia</label>
-          <label><input type="radio" name="Status" value="Dokter Gigi Spesialis Konservasi Gigi" required> Dokter Gigi Spesialis Konservasi Gigi</label>
-          <label><input type="radio" name="Status" value="Dokter Gigi Spesialis Bedah Mulut dan Maksilofasial" required> Dokter Gigi Spesialis Bedah Mulut Maksilofasial</label>
-          <label><input type="radio" name="Status" value="Dokter Gigi Spesialis Kedokteran Gigi Anak" required> Dokter Gigi Spesialis Kedokteran Gigi Anak </label>
-          <label><input type="radio" name="Status" value="Dokter Gigi Spesialis Radiologi Kedokteran Gigi" required> Dokter Gigi Spesialis Radiologi Kedokteran Gigi</label>
-          <label><input type="radio" name="Status" value="Dokter Gigi Spesialis Patologi Mulut dan Maksilofasial" required> Dokter Gigi Spesialis Patologi Mulut Maksilofasial</label>
-          <label><input type="radio" name="Status" value="Dokter Gigi Spesialis Odontologi Forensik" required> Dokter Gigi Spesialis Odontologi Forensik</label>
-          <label><input type="radio" name="Status" value="Mahasiswa" required> Mahasiswa/ Koas Kedokteran Gigi</label>
-          <label><input type="radio" name="Status" value="Terapis Gigi" required> Terapis Gigi Mulut</label>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="Bukti">Bukti Pembayaran:<span style="color:#cc000090;font-size:14px;vertical-align: super;">*</span></label>
-          <p style="color:#888888;font-size:14px;font-weight:400;line-height:1.3em!important;margin-top:5px;padding-bottom:0px;">
-<!--            Upload bukti transfer biaya registrasi sebesar Rp.100.000,- ke rekening BANK BCA - 0342103829 an. AGAM FERRY ERWANA (file format jpg/png, max 10MB) </p>-->
-            Upload bukti transfer biaya registrasi sebesar Rp.100.000,- ke rekening BANK MANDIRI - 1660003218328 an. RIFQIE AL-HARIS (file format jpg/png, max 10MB) </p>
-        <input type="file" id="Bukti" name="Bukti" class="file-upload" required>
-      </div>
-      <p><span style="color:#cc000090;font-size:14px;vertical-align: super;padding:0 0 0 20px;">*</span><span style="color:red;font-size:14px;">wajib diisi</p>
-      <button type="submit" class="btn-submit">Kirim</button>
-    </form>
-    <form id="registrationForm">
-    
-  </div>
+</div>
+<div class="form-group">
+<label for="Bukti">Bukti Pembayaran:<span style="color:#cc000090;font-size:14px;vertical-align: super;">*</span></label>
+<p style="color:#888888;font-size:14px;font-weight:400;line-height:1.3em!important;padding: 10px 0px 20px 0px;
+text-align: left;">
+<!--Upload bukti transfer biaya registrasi sebesar Rp.100.000,- ke rekening BANK BCA - 0342103829 an. AGAM FERRY ERWANA (file format jpg/png, max 10MB) </p>-->
+Upload bukti transfer biaya registrasi sebesar Rp.100.000,- ke rekening BANK MANDIRI - 1660003218328 an. RIFQIE AL-HARIS (file format jpg/png, max 10MB) </p>
+<input type="file" id="Bukti" name="Bukti" class="file-upload" accept="image/*" required>
+</div>
+<p style="color:#888888;font-size:12px;font-weight:400;line-height:1.3em!important;padding: 10px 0px 20px 0px;
+text-align: left;padding:0 30px 15px;">
+Mohon cek kembali seluruh inputan data agar tidak terkendala untuk verifikasi akun SatuSehat dan invite ke WAG webinar. Terimakasih </p>
+<button type="submit" class="btn-submit" onclick="submitForm()">Kirim</button>
+</form>
+</div>
 
-  <script>
-    document.getElementById('registrationForm').addEventListener('submit', function(event) {
-  event.preventDefault();
+<script>
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
+event.preventDefault();
 
-  // Simpan data formulir
-  const Nama = document.getElementById('Nama').value;
-  const Email = document.getElementById('Email').value;
-  const NIK = document.getElementById('NIK').value;
-  const WhatsApp = document.getElementById('WhatsApp').value;
-  const Status = document.querySelector('input[name="Status"]:checked').value;
-  const Bukti = document.getElementById('Bukti').files[0];
+// Simpan data formulir
+const Nama = document.getElementById('Nama').value;
+const Email = document.getElementById('Email').value;
+const NIK = document.getElementById('NIK').value;
+const WhatsApp = document.getElementById('WhatsApp').value;
+const Status = document.querySelector('input[name="Status"]:checked').value;
+const Bukti = document.getElementById('Bukti').files[0];
 
-  const formData = new FormData();
-  formData.append('Nama', Nama);
-  formData.append('Email', Email);
-  formData.append('NIK', NIK);
-  formData.append('WhatsApp', WhatsApp);
-  formData.append('Status', Status);
+const formData = new FormData();
+formData.append('Nama', Nama);
+formData.append('Email', Email);
+formData.append('NIK', NIK);
+formData.append('WhatsApp', WhatsApp);
+formData.append('Status', Status);
 
-  const reader = new FileReader();
-  reader.onloadend = function() {
-    formData.append('Bukti', reader.result.split(',')[1]); // Menghapus prefix base64
-    formData.append('BuktiName', Bukti.name);
-    formData.append('BuktiType', Bukti.type);
+const reader = new FileReader();
+reader.onloadend = function() {
+formData.append('Bukti', reader.result.split(',')[1]); // Menghapus prefix base64
+formData.append('BuktiName', Bukti.name);
+formData.append('BuktiType', Bukti.type);
 
-    // Kirim data ke Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycby_Bb-4U92Qg-LgyanW4PtWHQQbNmBHBme4eBaky_5d2izxQSgCdYxkpOSA8C4m2I3r0A/exec', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      window.location.href = 'confirmation.html'; // Halaman konfirmasi
-    })
-    .catch(error => {
-      alert('Terjadi kesalahan, coba lagi nanti.');
-      console.error('Error:', error);
-    });
-  };
-
-  if (Bukti) {
-    reader.readAsDataURL(Bukti);
-  } else {
-    alert('Harap unggah bukti pembayaran.');
-  }
+// Kirim data ke Google Apps Script
+fetch('https://script.google.com/macros/s/AKfycbxQgSENBEtzv1GlTXg37X19G0NM453T1iU1zXBAs6kY3OPC4hlUCNXJgOFy9XC3aFZBxw/exec', {
+method: 'POST',
+body: formData
+})
+.then(response => response.json())
+.then(data => {
+window.location.href = 'https://doktergigigaul.github.io/event-bite-ai/confirmation.html'; // Halaman konfirmasi
+})
+.catch(error => {
+alert('Terjadi kesalahan, coba lagi nanti.');
+console.error('Error:', error);
 });
-  </script>
-</body>
-</html>
+};
+
+if (Bukti) {
+reader.readAsDataURL(Bukti);
+} else {
+alert('Harap unggah bukti pembayaran.');
+}
+});
+</script>
